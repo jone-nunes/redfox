@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedFox Studios - Chatbot API</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #2d0b0b, #0a0505);
+        }
+        .fox-glow {
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex items-center justify-center p-4 selection:bg-red-600 selection:text-white">
+
+    <div class="max-w-2xl w-full bg-black/40 backdrop-blur-md border border-red-900/40 p-8 rounded-2xl fox-glow animate__animated animate__fadeInUp">
+        
+        <header class="text-center mb-8">
+            <div class="inline-block bg-red-600/10 p-3 rounded-full mb-3 animate__animated animate__heartBeat animate__delay-1s">
+                <svg class="w-12 h-12 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400 uppercase">
+                RedFox Studios
+            </h1>
+            <p class="text-gray-400 mt-2 text-sm md:text-base">
+                Bem-vindo ao chatbot do studio <span class="text-red-400 font-semibold">Red Fox</span>.
+            </p>
+        </header>
+
+        <hr class="border-red-900/30 mb-6">
+
+        <section class="space-y-4">
+            <h2 class="text-lg font-semibold text-red-400 flex items-center gap-2">
+                <span class="flex h-2 w-2 relative">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                </span>
+                Como ativar o bot:
+            </h2>
+            
+            <div class="bg-zinc-900/80 p-4 rounded-xl border border-zinc-800 space-y-3 text-sm">
+                <p>
+                    <span class="text-red-500 font-bold mr-1">1.</span> Pegue a URL do nosso chatbot: 
+                    <code class="block bg-black/50 text-red-400 p-2 rounded mt-1 font-mono text-xs overflow-x-auto border border-zinc-800">http://127.0.0.1:5000/chatbot/</code>
+                </p>
+                <p>
+                    <span class="text-red-500 font-bold mr-1">2.</span> Crie uma variável chamada <code class="text-orange-400 font-mono font-bold">re</code> e coloque na frente de <code class="text-zinc-400 font-mono">chatbot/</code> na URL com quote.
+                </p>
+            </div>
+
+            <div class="bg-gradient-to-r from-red-950/30 to-transparent p-4 rounded-xl border-l-4 border-red-500 text-sm">
+                <span class="text-xs uppercase tracking-wider text-red-400 font-bold block mb-1">Exemplo para testar:</span>
+                <a href="http://127.0.0.1:5000/chatbot/oi" target="_blank" class="font-mono text-gray-300 hover:text-red-400 transition-colors break-all underline decoration-red-500/50">
+                    http://127.0.0.1:5000/chatbot/oi
+                </a>
+            </div>
+        </section>
+
+        <hr class="border-red-900/30 my-6">
+
+        <section>
+            <h2 class="text-lg font-semibold text-gray-300 mb-4 flex items-center gap-2">
+                <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                Mais Funções (API Matemática)
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm">
+                <div class="bg-zinc-950/60 p-3 rounded-lg border border-zinc-800/80 hover:border-red-500/30 transition-all duration-300">
+                    <span class="font-bold text-red-400 block mb-1">Somar</span>
+                    <code class="text-zinc-400 font-mono text-[11px] block">/somar/numero/numero2</code>
+                </div>
+                <div class="bg-zinc-950/60 p-3 rounded-lg border border-zinc-800/80 hover:border-red-500/30 transition-all duration-300">
+                    <span class="font-bold text-red-400 block mb-1">Multiplicação</span>
+                    <code class="text-zinc-400 font-mono text-[11px] block">/mult/numero/numero2</code>
+                </div>
+                <div class="bg-zinc-950/60 p-3 rounded-lg border border-zinc-800/80 hover:border-red-500/30 transition-all duration-300">
+                    <span class="font-bold text-red-400 block mb-1">Subtração</span>
+                    <code class="text-zinc-400 font-mono text-[11px] block">/subt/numero/numero2</code>
+                </div>
+                <div class="bg-zinc-950/60 p-3 rounded-lg border border-zinc-800/80 hover:border-red-500/30 transition-all duration-300">
+                    <span class="font-bold text-red-400 block mb-1">Divisão</span>
+                    <code class="text-zinc-400 font-mono text-[11px] block">/divid/numero/numero2</code>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-8 text-center text-xs text-zinc-600">
+            &copy; 2026 RedFox Studios. Todos os direitos reservados.
+        </footer>
+
+    </div>
+
+</body>
+  </html>
