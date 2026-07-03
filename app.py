@@ -7,6 +7,8 @@ import os
 app = Flask(__name__)
 redfox = "made by jone nunes"
 
+API_KEY = os.getenv("API_KEY")
+
 html = "https://raw.githubusercontent.com/jone-nunes/redfox/refs/heads/main/index.html"
 
 @app.route("/")
@@ -15,7 +17,7 @@ def imprimir():
 	
 @app.route("/chatbot/<string:t>")
 def chatbot(t):
-	re = requests.get(f"https://gen.pollinations.ai/text/{t}/?key={key}")
+	re = requests.get(f"https://gen.pollinations.ai/text/{t}/?key={API_KEY}")
 	return re.text
 
 @app.route("/somar/<int:n>/<int:m>")
